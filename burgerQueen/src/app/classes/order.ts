@@ -6,5 +6,5 @@ export class Order {
   creationTime: Date = new Date(Date.now());
   products: Product[] = [];
   id:string = "";
-  status: string = "Creado77";
+  status: string[] = [];
 }

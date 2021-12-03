@@ -93,7 +93,6 @@ export class CardOrderProcessComponent implements OnInit {
 
   stateChange(item: any) {
     this.firebaseService.updateState(item);
-    // this.getStateDb();
   }
 
   stateValueSend(state: string) {
@@ -101,13 +100,4 @@ export class CardOrderProcessComponent implements OnInit {
     this.stateUpdate.emit(this.valueState);
   }
 
-  getStateDb(){
-    //return this.subscriptionStateOrderDb = 
-    this.firebaseService.getState().subscribe((res) => {
-      console.log("subscriptionStateOrderDb", res.status);
-      //newstatus = res.status;
-      this.stateOrderDbCard = res.status;
-      return this.stateOrderDbCard; //res.status;
-    })
-  }
 }
